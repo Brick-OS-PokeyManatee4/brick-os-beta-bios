@@ -1,11 +1,16 @@
 
+mov bp, 0x7c00
+mov sp, bp
 
-
+mov bx, TestString
 call PrintString
 
 jmp $
 
 PrintString:
+  mov ah 0x0e
+  mov al [bx]
+  int 0x10
   ret
   
 TestString:
