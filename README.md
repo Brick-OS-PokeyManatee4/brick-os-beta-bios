@@ -1,2 +1,2 @@
 # brick-os-beta-bios
-  This Will Be Worked On After UEFI One
+  This Will be much more easy to build so yeah
