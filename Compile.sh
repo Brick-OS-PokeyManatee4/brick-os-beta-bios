@@ -1,3 +1,6 @@
-nasm bootloader.asm -f bin -o bootloader.flp
+#/bin/bash
+mkdir bin
+
+nasm bootloader.asm -f bin -o bin/bootloader.flp
 
 echo Done
