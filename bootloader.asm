@@ -10,6 +10,7 @@ call PrintString
 jmp $
 
 %include "Print.asm"
+%include "DiskRead.asm"
 
 times 510-($-$$) db 0
 
