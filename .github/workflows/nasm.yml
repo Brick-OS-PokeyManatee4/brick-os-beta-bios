@@ -14,7 +14,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: ilammy/setup-nasm@v1.2.1
+      # - uses: ilammy/setup-nasm@v1.2.1
+      - name: Install nasm
+        run: apt-get install nasm
 
       - name: Build
         run: bash Compile.sh
