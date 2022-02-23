@@ -1,3 +1,5 @@
 
+PROGRAM_SPACE equ 0x7e00
+
 BOOT_DISK:
   db 0
