@@ -17,5 +17,5 @@ PrintString:
   ret
   
 String:
-  db 'Brick OS Loaded',0
+  db 'Brick OS Loaded Also Go Touch Grass',0
   
