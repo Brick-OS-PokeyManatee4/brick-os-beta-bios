@@ -16,6 +16,7 @@ PrintString:
   je .Exit
     mov al, [bx]
     int 0x10
+    inc bx
     jmp .Loop
   .Exit:
   ret
