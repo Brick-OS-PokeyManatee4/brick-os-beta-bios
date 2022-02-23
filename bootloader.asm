@@ -4,7 +4,7 @@
 mov bp, 0x7c00
 mov sp, bp
 
-mov bx, TestString
+mov bx, String
 call PrintString
 
 jmp $
