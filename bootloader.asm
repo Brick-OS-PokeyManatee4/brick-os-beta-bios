@@ -1,6 +1,8 @@
 
 [org 0x7c00]
 
+mov [BOOT_DISK], dl
+
 mov bp, 0x7c00
 mov sp, bp
 
