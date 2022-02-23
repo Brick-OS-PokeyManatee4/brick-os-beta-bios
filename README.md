@@ -1,3 +1,3 @@
-# brick-os-beta-bios
+# BrickOS
   This Will be much more easy to build so yeah
 to build you need nasm
