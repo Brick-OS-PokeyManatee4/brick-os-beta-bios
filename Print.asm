@@ -16,6 +16,6 @@ PrintString:
   pop bx
   ret
   
-TestString:
+String:
   db 'Brick OS Loaded',0
   
