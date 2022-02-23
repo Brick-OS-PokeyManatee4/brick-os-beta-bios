@@ -1,3 +1,4 @@
 # BrickOS (BIOS)
-  This Will be much more easy to build so yeah
-to build you need nasm
+Ok
+# Buillding
+First Get Nasm And Then run compile.sh for linux and mac and compile.bat for windows
