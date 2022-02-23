@@ -9,6 +9,8 @@ mov sp, bp
 mov bx, String
 call PrintString
 
+call ReadDisk
+
 jmp $
 
 %include "Print.asm"
