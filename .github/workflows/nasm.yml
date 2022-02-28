@@ -18,8 +18,7 @@ jobs:
 
 
       - name: Build
-        shell: bash
-        run: Compile.sh
+        run: bash Compile.sh
         
       - name: Download Output
         uses: actions/upload-artifact@v2
