@@ -6,9 +6,6 @@ mov [BOOT_DISK], dl
 mov bp, 0x7c00
 mov sp, bp
 
-mov bx, String
-call PrintString
-
 call ReadDisk
 
 mov ah, 0x0e
