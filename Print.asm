@@ -15,7 +15,3 @@ PrintString:
   pop ax
   pop bx
   ret
-  
-String:
-  db 'Brick OS Loaded Also Go Touch Grass',0
-  
