@@ -18,8 +18,8 @@ jobs:
 
 
       - name: Build
-        shell: cmd
-        run: Compile.bat
+        shell: bash
+        run: Compile.sh
         
       - name: Download Output
         uses: actions/upload-artifact@v2
