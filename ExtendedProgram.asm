@@ -4,6 +4,7 @@ jmp EnterProtectedMode
 
 %include "gdt.asm"
 %include "Print.asm"
+%include "CPUID.asm"
 
 EnterProtectedMode:
     call EnableA20
@@ -43,6 +44,7 @@ StartProtectedMode:
 	mov [0xb8012], byte 'l'
 	mov [0xb8014], byte 'd'
 
+	call DetectCPUID
         jmp $
 
 times 2048-($-$$) db 0
