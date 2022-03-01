@@ -31,21 +31,17 @@ StartProtectedMode:
 	mov fs, ax
         mov gs, ax
         
-        mov [0xb8000], byte 'B'
-	mov [0xb8002], byte 'r'
-	mov [0xb8004], byte 'i'
-	mov [0xb8006], byte 'c'
-	mov [0xb8008], byte 'k'
-	mov [0xb8010], byte ' '
-	mov [0xb8012], byte 'O'
-	mov [0xb8014], byte 'S'
-	mov [0xb8016], byte ' '
-	mov [0xb8018], byte 'L'
-	mov [0xb8020], byte 'o'
-	mov [0xb8022], byte 'a'
-	mov [0xb8024], byte 'd'
-	mov [0xb8026], byte 'e'
-	mov [0xb8028], byte 'd'
+        mov [0xb8000], byte 'H'
+	mov [0xb8002], byte 'e'
+	mov [0xb8004], byte 'l'
+	mov [0xb8006], byte 'l'
+	mov [0xb8008], byte 'o'
+	mov [0xb800a], byte ' '
+	mov [0xb800c], byte 'W'
+	mov [0xb800e], byte 'o'
+	mov [0xb8010], byte 'r'
+	mov [0xb8012], byte 'l'
+	mov [0xb8014], byte 'd'
 
         jmp $
 
