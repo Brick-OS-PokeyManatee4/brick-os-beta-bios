@@ -12,7 +12,7 @@ EnterProtectedMode:
     mov eax, cr0
     or eax, 1
     mov cr0, eax
-    jmp Codeseg:StartProtectedMode
+    jmp codeseg:StartProtectedMode
 
 EnableA20:
   in al, 0x92
@@ -26,12 +26,12 @@ StartProtectedMode:
 
         mov ax, dataseg
         mov ds, ax
-	    mov ss, ax
-	    mov es, ax
-	    mov fs, ax
+	mov ss, ax
+	mov es, ax
+	mov fs, ax
         mov gs, ax
         
-        mov [0xb8000], ';'
+        mov [0xb8000], byte ';'
 
         jmp $
 
