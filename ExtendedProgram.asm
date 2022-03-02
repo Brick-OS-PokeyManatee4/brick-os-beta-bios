@@ -45,6 +45,7 @@ StartProtectedMode:
 	mov [0xb8014], byte 'd'
 
 	call DetectCPUID
+	call DetectLongMode
         jmp $
 
 times 2048-($-$$) db 0
