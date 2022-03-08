@@ -1,4 +1,5 @@
 #/bin/bash
+echo Starting To Build
 echo Making Dirs
 mkdir bin
 echo Done Making Dirs
