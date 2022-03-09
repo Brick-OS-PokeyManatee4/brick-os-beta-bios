@@ -10,10 +10,10 @@ nasm ExtendedProgram.asm -f elf64 -o bin/ExtendedProgram.o
 gcc -Ttext 0x8000 -ffreestanding -mno-red-zone -m64 -c "Kernel.cpp" -o "Kernel.o"
 echo Done Building
 echo Linking
-ld -o "Kernel.elf" -Ttext 0x7e00 bin/ExtendedProgram.o Kernel.o
+ld -o "Kernel.tmp" -Ttext 0x7e00 bin/ExtendedProgram.o Kernel.o
 echo Done Linking
 echo Objcoping
-objcopy -O binary Kernel.elf bin/Kernel.bin
+objcopy -O binary Kernel.tmp bin/Kernel.bin
 echo Done Objcoping
 echo Merging
 cat bin/bootloader.bin bin/Kernel.bin > bin/bootloader.flp
