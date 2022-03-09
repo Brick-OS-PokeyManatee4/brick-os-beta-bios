@@ -44,10 +44,23 @@ StartProtectedMode:
 	mov [0xb8010], byte 'i'
 	mov [0xb8012], byte 'c'
 	mov [0xb8014], byte 'k'
+	mov [0xb8016], byte ' '
+	mov [0xb8018], byte 'O'
+	mov [0xb8020], byte 'S'
 
 	call DetectCPUID
 	call DetectLongMode
 	call SetUpIdentityPaging
-        jmp $
+	call EditGDT
+        jmp codeseg:Start64Bit
+	
+[bits 64]	
+	
+Start64Bit:
+	mov edi, 0xb8000
+	mov rax, 0x1f201f201f201f20
+	mov ecx, 500
+	rep stosq
+	jmp $
 
 times 2048-($-$$) db 0
