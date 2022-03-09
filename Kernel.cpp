@@ -1,3 +1,3 @@
-extern "C" void _start {
+extern "C" void _start() {
   return;
 }
