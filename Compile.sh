@@ -13,7 +13,7 @@ echo Linking
 ld -o "Kernel.elf" -Ttext 0x7e00 bin/ExtendedProgram.o Kernel.o
 echo Done Linking
 echo Objcoping
-objcopy -o binary Kernel.elf bin/Kernel.bin
+objcopy -O binary Kernel.elf bin/Kernel.bin
 echo Done Objcoping
 echo Merging
 cat bin/bootloader.bin bin/Kernel.bin > bin/bootloader.flp
