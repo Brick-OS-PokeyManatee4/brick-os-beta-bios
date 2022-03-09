@@ -5,6 +5,7 @@ jmp EnterProtectedMode
 %include "gdt.asm"
 %include "Print.asm"
 %include "CPUID.asm"
+%include "SimplePaging.asm"
 
 EnterProtectedMode:
     call EnableA20
