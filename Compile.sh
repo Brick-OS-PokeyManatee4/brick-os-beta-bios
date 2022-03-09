@@ -7,7 +7,7 @@ echo Building
 
 nasm bootloader.asm -f bin -o bin/bootloader.bin
 nasm ExtendedProgram.asm -f elf64 -o bin/ExtendedProgram.o
-x86_64-elf-gcc -Ttext 0x8000 -ffreestanding -mno-red-zone -m64 -c "Kernel.cpp" -o "Kernel.o"
+gcc -Ttext 0x8000 -ffreestanding -mno-red-zone -m64 -c "Kernel.cpp" -o "Kernel.o"
 echo Done Building
 echo Linking
 ld -o "Kernel.elf" -Ttext 0x7e00 bin/ExtendedProgram.o Kernel.o
