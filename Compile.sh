@@ -7,15 +7,19 @@ echo Building
 
 nasm bootloader.asm -f bin -o bootloader.bin
 nasm ExtendedProgram.asm -f elf64 -o ExtendedProgram.o
-gcc -ffreestanding -mno-red-zone -m64 -c "Kernel.cpp" -o "Kernel.o"
+gcc -Ttext 0x8000 -ffreestanding -mno-red-zone -m64 -c "Kernel.cpp" -o "Kernel.o"
 echo Done Building
 echo Linking
-ld -o kernel.tmp -Ttext 0x7e00 ExtendedProgram.o Kernel.o
+ld -T"linkbinary.ld"
 echo Done Linking
-echo Objcoping
-objcopy -O binary kernel.tmp bin/kernel.bin
-echo Done Objcoping
 echo Merging
-cat bin/bootloader.bin bin/kernel.bin > bin/bootloader.flp
+cat bootloader.bin kernel.bin > bin/bootloader.flp
 echo Done Merging
+echo Cleaning
+rm ExtendedProgram.o
+rm Kernel.o
+rm bootloader.bin
+rm kernel.bin
+ls
+echo Done Cleaning
 echo All Done
