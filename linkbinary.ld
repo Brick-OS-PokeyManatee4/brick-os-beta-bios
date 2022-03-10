@@ -3,15 +3,15 @@ OUTPUT_FORMAT(binary)
 ENTRY (_start)
 
 INPUT
-{
+(
   ExtendedProgram.o
   kernel.o
-}
+)
 
 OUTPUT
-{
+(
   Kernel.bin
-}
+)
 
 SECTIONS
 {
