@@ -10,7 +10,7 @@ INPUT
 
 OUTPUT
 (
-  Kernel.bin
+  kernel.bin
 )
 
 SECTIONS
