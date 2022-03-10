@@ -4,7 +4,6 @@ echo Making Dirs
 mkdir bin
 echo Done Making Dirs
 echo Building
-
 nasm bootloader.asm -f bin -o bootloader.bin
 nasm ExtendedProgram.asm -f elf64 -o ExtendedProgram.o
 gcc -Ttext 0x8000 -ffreestanding -mno-red-zone -m64 -c "Kernel.cpp" -o "Kernel.o"
