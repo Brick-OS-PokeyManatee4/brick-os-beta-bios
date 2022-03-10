@@ -2,7 +2,7 @@
 jmp EnterProtectedMode
 
 %include "gdt.asm"
-%include "print.asm"
+%include "Print.asm"
 
 
 EnterProtectedMode:
