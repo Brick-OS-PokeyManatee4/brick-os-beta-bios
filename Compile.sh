@@ -17,7 +17,7 @@ cat bootloader.bin kernel.bin > bin/bootloader.flp
 echo Done Merging
 echo Cleaning
 rm ExtendedProgram.o
-rm Kernel.o
+rm kernel.o
 rm bootloader.bin
 rm kernel.bin
 ls
