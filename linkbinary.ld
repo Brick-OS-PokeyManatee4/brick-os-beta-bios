@@ -5,7 +5,7 @@ ENTRY (_start)
 INPUT
 (
   ExtendedProgram.o
-  kernel.o
+  Kernel.o
 )
 
 OUTPUT
