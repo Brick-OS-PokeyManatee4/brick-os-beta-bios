@@ -14,8 +14,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: ilammy/setup-nasm@v1.2.1
-
+      
+      - name: ilammy/setup-nasm@v1.2.1
+        run: sudo apt install nasm
 
       - name: Build
         run: bash Compile.sh
