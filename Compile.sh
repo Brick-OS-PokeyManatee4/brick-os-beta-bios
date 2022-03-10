@@ -19,6 +19,5 @@ rm ExtendedProgram.o
 rm Kernel.o
 rm bootloader.bin
 rm kernel.bin
-ls
 echo Done Cleaning
 echo All Done
