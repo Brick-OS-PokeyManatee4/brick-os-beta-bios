@@ -1,3 +1,3 @@
-void start_() {
-  return;
+extern "C" void start_() {
+   return;
 }
