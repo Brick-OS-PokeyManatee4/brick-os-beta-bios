@@ -50,7 +50,7 @@ Start64Bit:
 	mov ecx, 500
 	rep stosq
 	
-	jmp _start
+	call _start
         jmp $
 
 
