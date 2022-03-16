@@ -41,8 +41,8 @@ StartProtectedMode:
 	jmp codeseg:Start64Bit
 
 [bits 64]
-[extern _start]
 
+[extern _start]
 
 Start64Bit:
 	mov edi, 0xb8000
