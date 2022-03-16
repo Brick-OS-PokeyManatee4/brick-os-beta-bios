@@ -1,3 +1,3 @@
 void start_() {
-
+  return;
 }
