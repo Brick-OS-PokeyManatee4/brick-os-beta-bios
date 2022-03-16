@@ -12,10 +12,10 @@ echo Linking
 ld -o kernel.tmp -Ttext 0x7e00 ExtendedProgram.o Kernel.o
 echo Done Linking
 echo Objcopying
-objcopy -O binary kernel.tmp kernel.bin
+objcopy -O binary kernel.tmp Kernel.bin
 echo Done Objcopying
 echo Merging
-cat bootloader.bin kernel.bin > bin/bootloader.flp
+cat bootloader.bin Kernel.bin > bin/bootloader.flp
 echo Done Merging
 echo Cleaning
 rm ExtendedProgram.o
