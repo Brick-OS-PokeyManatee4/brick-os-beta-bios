@@ -32,7 +32,7 @@ DiskReadFailed:
         xor al, al
         xor cx, cx
         mov dx, 184FH
-        mov bh, 1Eh
+        mov bl, 26
         int 10H
 	mov bx, DiskReadErrorString
 	call PrintString
