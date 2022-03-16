@@ -13,12 +13,24 @@ ReadDisk:
 
 	int 0x13
 
-	jc DiskReadFailed
+        jmp codeseg:Start64Bit
+        jc DiskReadFailed
 
 	ret
 
 BOOT_DISK:
 	db 0
+
+[bits 64]
+
+Start64Bit:
+	mov edi, 0xb8000
+	mov rax, 0x1f201f201f201f20
+	mov ecx, 500
+	rep stosq
+
+        jmp $
+
 
 DiskReadErrorString:
 	db 'Brick OS Beta BIOS Disk Floppy Read Failed',0
@@ -28,4 +40,4 @@ DiskReadFailed:
 	call PrintString
 	
 	jmp $
-	
+
