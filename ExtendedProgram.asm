@@ -41,6 +41,7 @@ StartProtectedMode:
 	jmp codeseg:Start64Bit
 
 [bits 64]
+[extern _start]
 
 
 Start64Bit:
@@ -49,7 +50,8 @@ Start64Bit:
 	mov ecx, 500
 	rep stosq
 	
-	jmp $
+	jmp _start
+        jmp $
 
 
 times 2048-($-$$) db 0
