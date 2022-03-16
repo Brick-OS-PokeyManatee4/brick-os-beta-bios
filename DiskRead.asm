@@ -20,11 +20,10 @@ ReadDisk:
 BOOT_DISK:
 	db 0
 
-DiskReadErrorString:
-	db 'Disk Read Failed',0
-
 DiskReadFailed:
-	mov bx, DiskReadErrorString
-	call PrintString
-
+	mov edi, 0xb8000
+	mov rax, 0x1f201f201f201f20
+	mov ecx, 500
+	rep stosq
+	
 	jmp $
