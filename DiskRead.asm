@@ -28,7 +28,10 @@ DiskReadErrorCodeString:
 
 
 DiskReadFailed:
-        mov al, 26h
+        mov ah, 06h
+        xor al, al
+        xor cx, cx
+        mov dx, 184FH
         int 10H
 	mov bx, DiskReadErrorString
 	call PrintString
