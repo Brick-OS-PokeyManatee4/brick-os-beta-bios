@@ -23,6 +23,10 @@ BOOT_DISK:
 DiskReadErrorString:
 	db 'Brick OS Beta BIOS Disk Floppy Read Failed',0
 
+DiskReadErrorCodeString:
+	db 'Error Code: DISKREADFAILEDERROR',0
+
+
 DiskReadFailed:
         mov ah, 06h
         xor al, al
@@ -32,6 +36,8 @@ DiskReadFailed:
         int 10H
 	mov bx, DiskReadErrorString
 	call PrintString
+	mov bx, DiskReadErrorCodeString
+        call PrintString
 	
 	jmp $
 
