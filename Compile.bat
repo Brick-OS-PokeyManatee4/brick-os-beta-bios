@@ -1,6 +1,6 @@
+mkdir bin
 nasm bootloader.asm -f bin -o bootloader.bin
 nasm ExtendedProgram.asm -f elf64 -o ExtendedProgram.o
-
 gcc -ffreestanding -mno-red-zone -m64 -c "Kernel.cpp" -o "Kernel.o"
 echo Done Building
 echo Linking
