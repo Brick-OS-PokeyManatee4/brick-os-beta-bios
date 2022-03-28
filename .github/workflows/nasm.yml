@@ -17,6 +17,7 @@ jobs:
       - uses: ilammy/setup-nasm@v1.2.1
 
       - name: Build
+        shell: cmd
         run: compile.bat
         
       - name: Download Output
