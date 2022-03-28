@@ -10,16 +10,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
 
     steps:
       - uses: actions/checkout@v2
-      
-      - name: ilammy/setup-nasm@v1.2.1
-        run: sudo apt install nasm
+      - uses: ilammy/setup-nasm@v1.2.1
 
       - name: Build
-        run: bash Compile.sh
+        run: compile.bat
         
       - name: Download Output
         uses: actions/upload-artifact@v2
