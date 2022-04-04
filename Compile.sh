@@ -2,6 +2,8 @@
 echo Starting To Build
 echo Making Dirs
 mkdir bin
+mkdir bin/isoOutput
+mkdir bin/boot/os
 echo Done Making Dirs
 echo Building
 nasm bootloader.asm -f bin -o bootloader.bin
@@ -15,11 +17,12 @@ echo Objcopying
 objcopy -O binary kernel.tmp Kernel.bin
 echo Done Objcopying
 echo Merging
-cat bootloader.bin Kernel.bin > bin/bootloader.flp
+cat bootloader.bin Kernel.bin > bin/boot/os/BrickOS.bin
 echo Done Merging
+echo Copying BrickOSDebug
+cp bin/boot/os/BrickOS.bin bin/boot/os/BrickOSDebug.bin
 echo Cleaning
 rm ExtendedProgram.o
-rm bootloader.bin
 rm Kernel.o
 rm kernel.bin
 echo Done Cleaning
