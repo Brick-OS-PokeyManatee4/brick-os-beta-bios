@@ -1,0 +1,8 @@
+echo Installing Packages
+sudo apt-get install grub-common
+sudo apt-get install grub-file
+sudo apt-get install make
+sudo apt-get install mtools
+sudo apt-get install gcc
+echo Done Installing Needed Packages
+echo Done
