@@ -1,17 +1,4 @@
-OUTPUT_FORMAT(binary)
-
 ENTRY (_start)
-
-INPUT
-(
-    ExtendedProgram.o
-    Kernel.o
-)
-
-OUTPUT
-(
-  Kernel.bin
-)
 
 SECTIONS
 {
