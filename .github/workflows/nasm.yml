@@ -10,18 +10,19 @@ on:
 
 jobs:
   build:
-    runs-on: windows-2019
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - uses: ilammy/setup-nasm@v1.2.1
+      
+      - name: Run ilammy/setup-nasm@v1.2.1
+        run: sudo apt-get install nasm
 
       - name: Build
-        shell: cmd
-        run: compile.bat
+        run:  bash configure && bash compile.sh
         
       - name: Download Output
         uses: actions/upload-artifact@v2
         with:
           name: Bootloader
-          path: bin/bootloader.flp
+          path: bin/isoOutput
