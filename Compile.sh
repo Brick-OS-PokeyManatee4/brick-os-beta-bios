@@ -21,6 +21,10 @@ cat bootloader.bin Kernel.bin > bin/boot/os/BrickOS.bin
 echo Done Merging
 echo Copying BrickOSDebug
 cp bin/boot/os/BrickOS.bin bin/boot/os/BrickOSDebug.bin
+echo Done Copying Now Grubbing
+echo Grubbing
+grub-mkrescue -o bin/isoOutput/BrickOSGrub.iso bin
+echo Done Grubbing Now Cleaning
 echo Cleaning
 rm ExtendedProgram.o
 rm Kernel.o
