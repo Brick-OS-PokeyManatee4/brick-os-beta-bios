@@ -19,7 +19,7 @@ jobs:
         run: sudo apt-get install nasm
 
       - name: Build
-        run:  bash configure && bash compile.sh
+        run:  bash configure && bash Compile.sh
         
       - name: Download Output
         uses: actions/upload-artifact@v2
