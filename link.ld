@@ -17,27 +17,22 @@ SECTIONS
 {
     . = 1M;
 
-    .text : ALIGN(0x1000)
+    .text : ALIGN(4K)
     {
       *(.text)
       *(.multiboot)
     }
-    .idt BLOCK(0x1000) : ALIGN(0x1000)
-    {
-      _idt = .;
-      . = . + 0x1000;
-    }
-    .data : ALIGN(0x1000)
+    .data : ALIGN(4K)
     {
       *(.data)
     }
 
-    .rodata : ALIGN(0x1000)
+    .rodata : ALIGN(4K)
     {
       *(.rodata)
     }
 
-    .bss : ALIGN(0x1000)
+    .bss : ALIGN(4K)
     {
     *(COMMON)
     *(.bss)
