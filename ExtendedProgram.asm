@@ -1,6 +1,5 @@
 section .text
 section .data
-section .rodata
 
 jmp EnterProtectedMode
 
