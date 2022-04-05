@@ -5,14 +5,6 @@
 .set CHECKSUM, -(MAGIC + FLAGS)
 
 .section .multiboot
-.align 4
-.long MAGIC
-.long FLAGS
-.long CHECKSUM
-
-.section .bss
-.align 16
-.skip 16384
 
 mov $stack_top, %esp
 jmp EnterProtectedMode
