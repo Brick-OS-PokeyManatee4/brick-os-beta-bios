@@ -17,8 +17,7 @@ stack_bottom:
 stack_top:
 
 	mov $stack_top, %esp
-
-jmp EnterProtectedMode
+        jmp EnterProtectedMode
 
 %include "gdt.asm"
 %include "Print.asm"
