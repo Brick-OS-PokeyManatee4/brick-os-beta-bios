@@ -10,7 +10,7 @@ nasm ExtendedProgram.asm -f elf64 -o ExtendedProgram.o
 gcc -ffreestanding -mno-red-zone -m64 -c "Kernel.cpp" -o "Kernel.o"
 echo Done Building
 echo Linking
-ld -T link.ld -o Kernel.bin ExtendedProgram.o Kernel.o -N
+ld -T link.ld ExtendedProgram.o Kernel.o -o Kernel.bin
 echo Done Linking
 echo Merging
 cat bootloader.bin Kernel.bin > bin/boot/os/BrickOS.bin
