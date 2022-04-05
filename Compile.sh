@@ -7,10 +7,10 @@ echo Done Making Dirs
 echo Building
 nasm bootloader.asm -f bin -o bootloader.bin
 nasm ExtendedProgram.asm -f elf64 -o ExtendedProgram.o
-gcc -Ttext 0x8000 -ffreestanding -mno-red-zone -m64 -c "Kernel.cpp" -o "Kernel.o"
+gcc -ffreestanding -mno-red-zone -m64 -c "Kernel.cpp" -o "Kernel.o"
 echo Done Building
 echo Linking
-ld -T link.ld -o Kernel.bin ExtendedProgram.o Kernel.o -no-pie -N
+ld -T link.ld -o Kernel.bin ExtendedProgram.o Kernel.o -N
 echo Done Linking
 echo Merging
 cat bootloader.bin Kernel.bin > bin/boot/os/BrickOS.bin
