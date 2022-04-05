@@ -12,12 +12,10 @@
 
 .section .bss
 .align 16
-stack_bottom:
-.skip 16384 # 16 KiB
-stack_top:
+.skip 16384
 
-	mov $stack_top, %esp
-        jmp EnterProtectedMode
+mov $stack_top, %esp
+jmp EnterProtectedMode
 
 %include "gdt.asm"
 %include "Print.asm"
