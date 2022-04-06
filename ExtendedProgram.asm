@@ -1,3 +1,4 @@
+section .text
 
 jmp EnterProtectedMode
 
