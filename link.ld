@@ -2,27 +2,41 @@ OUTPUT_FORMAT(binary)
 
 ENTRY (_start)
 
+INPUT
+(
+    ExtendedProgram.o
+    Kernel.o
+)
+
+OUTPUT
+(
+  Kernel.bin
+)
+
 SECTIONS
 {
-    . = 1M;
-    
-    .text BLOCK(4K) : ALIGN(4K)
+    . = 0x8000;
+
+    .text : ALIGN(0x1000)
     {
-      *(.multiboot)
       *(.text)
     }
-
-    .data BLOCK(4K) : ALIGN(4K)
+    .idt BLOCK(0x1000) : ALIGN(0x1000)
+    {
+      _idt = .;
+      . = . + 0x1000;
+    }
+    .data : ALIGN(0x1000)
     {
       *(.data)
     }
 
-    .rodata BLOCK(4K) : ALIGN(4K)
+    .rodata : ALIGN(0x1000)
     {
       *(.rodata)
     }
 
-    .bss BLOCK(4K) : ALIGN(4K)
+    .bss : ALIGN(0x1000)
     {
     *(COMMON)
     *(.bss)
