@@ -18,6 +18,6 @@ echo Done Merging
 echo Cleaning
 rm ExtendedProgram.o
 rm Kernel.o
-rm kernel.bin
+rm Kernel.bin
 echo Done Cleaning
 echo All Done
