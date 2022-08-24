@@ -20,4 +20,4 @@ rm ExtendedProgram.o
 rm Kernel.o
 rm Kernel.bin
 echo Done Cleaning
-echo All Done
+echo All Done Compileing OS
