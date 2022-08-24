@@ -1,6 +1,7 @@
 #/bin/bash
 echo Starting To Build
 echo Making Dirs
+mkdir bin
 mkdir bin/isoOutput
 mkdir bin/boot/os
 echo Done Making Dirs
