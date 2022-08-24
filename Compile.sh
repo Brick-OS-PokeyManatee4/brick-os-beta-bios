@@ -3,6 +3,7 @@ echo Starting To Build
 echo Making Dirs
 mkdir bin
 mkdir bin/isoOutput
+mkdir bin/boot
 mkdir bin/boot/os
 echo Done Making Dirs
 echo Building
